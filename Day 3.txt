@@ -1,0 +1,49 @@
+Create a document providing all steps for
+publishing using self contained and dependent mode
+
+1. Introduction
+When publishing a .NET application, you have two primary deployment modes:
+
+a)Framework-Dependent Deployment (FDD)
+The application depends on the .NET runtime installed on the target machine.
+The published package is smaller.
+Requires the correct .NET runtime version to be installed on the host system.
+
+b)Self-Contained Deployment (SCD)
+The application includes the .NET runtime.
+No need for .NET to be installed on the host system.
+The published package is larger because it bundles the runtime.
+
+2. Pre-requisites
+.NET SDK installed on your machine (e.g., .NET 7.0 or 8.0)
+Visual Studio or CLI
+A .NET project ready to publish
+
+3. Steps
+3.1 Framework-Dependent Deployment
+Open your project in Visual Studio.
+Right-click the project in Solution Explorer → Publish.
+Click Start → choose Folder (or any target).
+Click Next → select Framework-Dependent.
+Click Finish → then click Publish.
+Your application is now published to the specified folder. It will require the .NET runtime installed on the target machine.
+
+3.2 Self-Contained Deployment
+Open your project in Visual Studio.
+Right-click the project → Publish.
+Click Start → choose Folder.
+Click Next → select Self-Contained.
+Choose Target Runtime depending on the OS:
+win-x64 → Windows 64-bit
+win-arm64 → Windows ARM
+linux-x64 → Linux 64-bit
+Click Finish → then click Publish.
+Your application will now include the .NET runtime and can run on any machine without installing .NET.
+
+4. Running the Published Application
+Navigate to the published folder:
+cd <publish-folder-path>
+Run the application:
+Windows:MyApp.exe
+Linux/macOS:./MyApp
+
