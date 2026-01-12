@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/Varsha Greeting Folder/">
+    <Project Path="Greeting App/Greeting App.csproj" />
+    <Project Path="Greeting Library/Greeting Library.csproj" />
+  </Folder>
+</Solution>

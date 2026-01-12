@@ -1,0 +1,6 @@
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\ConsoleApp4\Greeting Library\bin\Debug\Greeting Library.dll
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\ConsoleApp4\Greeting Library\bin\Debug\Greeting Library.pdb
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\ConsoleApp4\Greeting Library\obj\Debug\Greeting Library.csproj.AssemblyReference.cache
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\ConsoleApp4\Greeting Library\obj\Debug\Greeting Library.csproj.CoreCompileInputs.cache
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\ConsoleApp4\Greeting Library\obj\Debug\Greeting Library.dll
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\ConsoleApp4\Greeting Library\obj\Debug\Greeting Library.pdb

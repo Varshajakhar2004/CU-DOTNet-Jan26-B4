@@ -1,0 +1,10 @@
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\ConsoleApp4\Greeting App\bin\Debug\Greeting App.exe.config
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\ConsoleApp4\Greeting App\bin\Debug\Greeting App.exe
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\ConsoleApp4\Greeting App\bin\Debug\Greeting App.pdb
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\ConsoleApp4\Greeting App\obj\Debug\Greeting App.csproj.AssemblyReference.cache
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\ConsoleApp4\Greeting App\obj\Debug\Greeting App.csproj.CoreCompileInputs.cache
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\ConsoleApp4\Greeting App\obj\Debug\Greeting App.exe
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\ConsoleApp4\Greeting App\obj\Debug\Greeting App.pdb
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\ConsoleApp4\Greeting App\bin\Debug\Greeting Library.dll
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\ConsoleApp4\Greeting App\bin\Debug\Greeting Library.pdb
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\ConsoleApp4\Greeting App\obj\Debug\Greeting.C6D7E819.Up2Date
