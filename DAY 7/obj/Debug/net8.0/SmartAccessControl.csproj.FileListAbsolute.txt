@@ -1,0 +1,14 @@
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\SmartAccessControl\SmartAccessControl\bin\Debug\net8.0\SmartAccessControl.exe
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\SmartAccessControl\SmartAccessControl\bin\Debug\net8.0\SmartAccessControl.deps.json
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\SmartAccessControl\SmartAccessControl\bin\Debug\net8.0\SmartAccessControl.runtimeconfig.json
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\SmartAccessControl\SmartAccessControl\bin\Debug\net8.0\SmartAccessControl.dll
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\SmartAccessControl\SmartAccessControl\bin\Debug\net8.0\SmartAccessControl.pdb
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\SmartAccessControl\SmartAccessControl\obj\Debug\net8.0\SmartAccessControl.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\SmartAccessControl\SmartAccessControl\obj\Debug\net8.0\SmartAccessControl.AssemblyInfoInputs.cache
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\SmartAccessControl\SmartAccessControl\obj\Debug\net8.0\SmartAccessControl.AssemblyInfo.cs
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\SmartAccessControl\SmartAccessControl\obj\Debug\net8.0\SmartAccessControl.csproj.CoreCompileInputs.cache
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\SmartAccessControl\SmartAccessControl\obj\Debug\net8.0\SmartAccessControl.dll
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\SmartAccessControl\SmartAccessControl\obj\Debug\net8.0\refint\SmartAccessControl.dll
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\SmartAccessControl\SmartAccessControl\obj\Debug\net8.0\SmartAccessControl.pdb
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\SmartAccessControl\SmartAccessControl\obj\Debug\net8.0\SmartAccessControl.genruntimeconfig.cache
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\SmartAccessControl\SmartAccessControl\obj\Debug\net8.0\ref\SmartAccessControl.dll
