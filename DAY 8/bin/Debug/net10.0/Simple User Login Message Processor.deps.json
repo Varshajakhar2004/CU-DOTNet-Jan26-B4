@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Simple User Login Message Processor/1.0.0": {
+        "runtime": {
+          "Simple User Login Message Processor.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Simple User Login Message Processor/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,14 @@
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Simple User Login Message Processor\Simple User Login Message Processor\bin\Debug\net10.0\Simple User Login Message Processor.exe
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Simple User Login Message Processor\Simple User Login Message Processor\bin\Debug\net10.0\Simple User Login Message Processor.deps.json
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Simple User Login Message Processor\Simple User Login Message Processor\bin\Debug\net10.0\Simple User Login Message Processor.runtimeconfig.json
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Simple User Login Message Processor\Simple User Login Message Processor\bin\Debug\net10.0\Simple User Login Message Processor.dll
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Simple User Login Message Processor\Simple User Login Message Processor\bin\Debug\net10.0\Simple User Login Message Processor.pdb
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Simple User Login Message Processor\Simple User Login Message Processor\obj\Debug\net10.0\Simple User Login Message Processor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Simple User Login Message Processor\Simple User Login Message Processor\obj\Debug\net10.0\Simple User Login Message Processor.AssemblyInfoInputs.cache
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Simple User Login Message Processor\Simple User Login Message Processor\obj\Debug\net10.0\Simple User Login Message Processor.AssemblyInfo.cs
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Simple User Login Message Processor\Simple User Login Message Processor\obj\Debug\net10.0\Simple User Login Message Processor.csproj.CoreCompileInputs.cache
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Simple User Login Message Processor\Simple User Login Message Processor\obj\Debug\net10.0\Simple User Login Message Processor.dll
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Simple User Login Message Processor\Simple User Login Message Processor\obj\Debug\net10.0\refint\Simple User Login Message Processor.dll
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Simple User Login Message Processor\Simple User Login Message Processor\obj\Debug\net10.0\Simple User Login Message Processor.pdb
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Simple User Login Message Processor\Simple User Login Message Processor\obj\Debug\net10.0\Simple User Login Message Processor.genruntimeconfig.cache
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Simple User Login Message Processor\Simple User Login Message Processor\obj\Debug\net10.0\ref\Simple User Login Message Processor.dll
