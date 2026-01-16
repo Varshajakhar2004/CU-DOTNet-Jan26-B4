@@ -1,0 +1,14 @@
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Bank Transaction Narration Analyzer\Bank Transaction Narration Analyzer\obj\Debug\net10.0\Bank Transaction Narration Analyzer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Bank Transaction Narration Analyzer\Bank Transaction Narration Analyzer\obj\Debug\net10.0\Bank Transaction Narration Analyzer.AssemblyInfoInputs.cache
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Bank Transaction Narration Analyzer\Bank Transaction Narration Analyzer\obj\Debug\net10.0\Bank Transaction Narration Analyzer.AssemblyInfo.cs
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Bank Transaction Narration Analyzer\Bank Transaction Narration Analyzer\obj\Debug\net10.0\Bank Transaction Narration Analyzer.csproj.CoreCompileInputs.cache
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Bank Transaction Narration Analyzer\Bank Transaction Narration Analyzer\bin\Debug\net10.0\Bank Transaction Narration Analyzer.exe
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Bank Transaction Narration Analyzer\Bank Transaction Narration Analyzer\bin\Debug\net10.0\Bank Transaction Narration Analyzer.deps.json
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Bank Transaction Narration Analyzer\Bank Transaction Narration Analyzer\bin\Debug\net10.0\Bank Transaction Narration Analyzer.runtimeconfig.json
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Bank Transaction Narration Analyzer\Bank Transaction Narration Analyzer\bin\Debug\net10.0\Bank Transaction Narration Analyzer.dll
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Bank Transaction Narration Analyzer\Bank Transaction Narration Analyzer\bin\Debug\net10.0\Bank Transaction Narration Analyzer.pdb
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Bank Transaction Narration Analyzer\Bank Transaction Narration Analyzer\obj\Debug\net10.0\Bank Transaction Narration Analyzer.dll
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Bank Transaction Narration Analyzer\Bank Transaction Narration Analyzer\obj\Debug\net10.0\refint\Bank Transaction Narration Analyzer.dll
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Bank Transaction Narration Analyzer\Bank Transaction Narration Analyzer\obj\Debug\net10.0\Bank Transaction Narration Analyzer.pdb
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Bank Transaction Narration Analyzer\Bank Transaction Narration Analyzer\obj\Debug\net10.0\Bank Transaction Narration Analyzer.genruntimeconfig.cache
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Bank Transaction Narration Analyzer\Bank Transaction Narration Analyzer\obj\Debug\net10.0\ref\Bank Transaction Narration Analyzer.dll
