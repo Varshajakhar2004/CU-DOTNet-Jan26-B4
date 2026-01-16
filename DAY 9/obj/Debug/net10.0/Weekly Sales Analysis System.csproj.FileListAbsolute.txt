@@ -1,0 +1,14 @@
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Weekly Sales Analysis System\Weekly Sales Analysis System\bin\Debug\net10.0\Weekly Sales Analysis System.exe
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Weekly Sales Analysis System\Weekly Sales Analysis System\bin\Debug\net10.0\Weekly Sales Analysis System.deps.json
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Weekly Sales Analysis System\Weekly Sales Analysis System\bin\Debug\net10.0\Weekly Sales Analysis System.runtimeconfig.json
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Weekly Sales Analysis System\Weekly Sales Analysis System\bin\Debug\net10.0\Weekly Sales Analysis System.dll
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Weekly Sales Analysis System\Weekly Sales Analysis System\bin\Debug\net10.0\Weekly Sales Analysis System.pdb
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Weekly Sales Analysis System\Weekly Sales Analysis System\obj\Debug\net10.0\Weekly Sales Analysis System.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Weekly Sales Analysis System\Weekly Sales Analysis System\obj\Debug\net10.0\Weekly Sales Analysis System.AssemblyInfoInputs.cache
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Weekly Sales Analysis System\Weekly Sales Analysis System\obj\Debug\net10.0\Weekly Sales Analysis System.AssemblyInfo.cs
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Weekly Sales Analysis System\Weekly Sales Analysis System\obj\Debug\net10.0\Weekly Sales Analysis System.csproj.CoreCompileInputs.cache
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Weekly Sales Analysis System\Weekly Sales Analysis System\obj\Debug\net10.0\Weekly Sales Analysis System.dll
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Weekly Sales Analysis System\Weekly Sales Analysis System\obj\Debug\net10.0\refint\Weekly Sales Analysis System.dll
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Weekly Sales Analysis System\Weekly Sales Analysis System\obj\Debug\net10.0\Weekly Sales Analysis System.pdb
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Weekly Sales Analysis System\Weekly Sales Analysis System\obj\Debug\net10.0\Weekly Sales Analysis System.genruntimeconfig.cache
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Weekly Sales Analysis System\Weekly Sales Analysis System\obj\Debug\net10.0\ref\Weekly Sales Analysis System.dll

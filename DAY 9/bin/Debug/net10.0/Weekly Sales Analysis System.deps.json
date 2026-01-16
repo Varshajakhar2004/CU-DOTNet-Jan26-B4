@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Weekly Sales Analysis System/1.0.0": {
+        "runtime": {
+          "Weekly Sales Analysis System.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Weekly Sales Analysis System/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
