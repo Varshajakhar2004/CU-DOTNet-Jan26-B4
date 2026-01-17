@@ -1,0 +1,14 @@
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\ales Order Processing System\ales Order Processing System\bin\Debug\net10.0\ales Order Processing System.exe
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\ales Order Processing System\ales Order Processing System\bin\Debug\net10.0\ales Order Processing System.deps.json
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\ales Order Processing System\ales Order Processing System\bin\Debug\net10.0\ales Order Processing System.runtimeconfig.json
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\ales Order Processing System\ales Order Processing System\bin\Debug\net10.0\ales Order Processing System.dll
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\ales Order Processing System\ales Order Processing System\bin\Debug\net10.0\ales Order Processing System.pdb
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\ales Order Processing System\ales Order Processing System\obj\Debug\net10.0\ales Order Processing System.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\ales Order Processing System\ales Order Processing System\obj\Debug\net10.0\ales Order Processing System.AssemblyInfoInputs.cache
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\ales Order Processing System\ales Order Processing System\obj\Debug\net10.0\ales Order Processing System.AssemblyInfo.cs
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\ales Order Processing System\ales Order Processing System\obj\Debug\net10.0\ales Order Processing System.csproj.CoreCompileInputs.cache
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\ales Order Processing System\ales Order Processing System\obj\Debug\net10.0\ales Order Processing System.dll
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\ales Order Processing System\ales Order Processing System\obj\Debug\net10.0\refint\ales Order Processing System.dll
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\ales Order Processing System\ales Order Processing System\obj\Debug\net10.0\ales Order Processing System.pdb
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\ales Order Processing System\ales Order Processing System\obj\Debug\net10.0\ales Order Processing System.genruntimeconfig.cache
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\ales Order Processing System\ales Order Processing System\obj\Debug\net10.0\ref\ales Order Processing System.dll
