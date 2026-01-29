@@ -1,0 +1,22 @@
+{
+        int count = 0;
+        int start = a.Max();  
+        int end = b.Min();     
+
+        for (int i = start; i <= end; i++) 
+        {
+            bool valid = true;
+
+            foreach (var x in a)
+                if (i % x != 0) { valid = false; break; }
+
+            if (!valid) continue;
+
+            foreach (var y in b)
+                if (y % i != 0) { valid = false; break; }
+
+            if (valid) count++; 
+        }
+
+        return count;
+    }
