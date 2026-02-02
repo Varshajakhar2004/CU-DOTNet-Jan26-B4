@@ -1,6 +1,4 @@
-﻿using System.Xml.Serialization;
-
-namespace week_4
+﻿namespace week_4
 {
     //entity class
     class Student1
@@ -151,6 +149,8 @@ namespace week_4
 
                 }
             } while (choice != 6);
+
+          Console.WriteLine("Program ended---------------------------"
         }
     }
 }
