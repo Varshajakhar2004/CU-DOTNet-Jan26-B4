@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Week08Assessment/1.0.0": {
+        "dependencies": {
+          "Week08assessmentLibrary": "1.0.0"
+        },
+        "runtime": {
+          "Week08Assessment.dll": {}
+        }
+      },
+      "Week08assessmentLibrary/1.0.0": {
+        "runtime": {
+          "Week08assessmentLibrary.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Week08Assessment/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Week08assessmentLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Week08Assessment/Week08Assessment.csproj" />
+  <Project Path="Week08assessmentLibrary/Week08assessmentLibrary.csproj" />
+  <Project Path="week08assessmentTestProject/week08assessmentTestProject.csproj" />
+</Solution>

@@ -1,0 +1,11 @@
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Week08Assessment\Week08assessmentLibrary\bin\Debug\net8.0\Week08assessmentLibrary.deps.json
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Week08Assessment\Week08assessmentLibrary\bin\Debug\net8.0\Week08assessmentLibrary.dll
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Week08Assessment\Week08assessmentLibrary\bin\Debug\net8.0\Week08assessmentLibrary.pdb
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Week08Assessment\Week08assessmentLibrary\obj\Debug\net8.0\Week08assessmentLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Week08Assessment\Week08assessmentLibrary\obj\Debug\net8.0\Week08assessmentLibrary.AssemblyInfoInputs.cache
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Week08Assessment\Week08assessmentLibrary\obj\Debug\net8.0\Week08assessmentLibrary.AssemblyInfo.cs
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Week08Assessment\Week08assessmentLibrary\obj\Debug\net8.0\Week08assessmentLibrary.csproj.CoreCompileInputs.cache
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Week08Assessment\Week08assessmentLibrary\obj\Debug\net8.0\Week08assessmentLibrary.dll
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Week08Assessment\Week08assessmentLibrary\obj\Debug\net8.0\refint\Week08assessmentLibrary.dll
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Week08Assessment\Week08assessmentLibrary\obj\Debug\net8.0\Week08assessmentLibrary.pdb
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\Week08Assessment\Week08assessmentLibrary\obj\Debug\net8.0\ref\Week08assessmentLibrary.dll
