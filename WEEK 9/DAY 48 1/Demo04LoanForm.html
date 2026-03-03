@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h1>Loan Application Form</h1>
+        <h2>Personal Details</h2>
+
+        <table>
+            <tr>
+                <td>
+                    <label>Enter Full Name(as per id proof):</label>
+                </td>
+                <td>
+                    <input type="text" pattern="[A-Z\s]+" name="name" id="name" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Select DOB</label>
+                </td>
+                <td>
+                    <input type="date" name="dob" id="dob" min="1980-01-01" max="2005-12-31" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Select Gender</label>
+                </td>
+                <td>
+                    <input type="radio" name="gender" value="Male" required><label for="Male">Male</label> 
+                    <input type="radio" name="gender" value="Female" required><label for="Female">Female</label> 
+                    <input type="radio" name="gender" value="Other" required> <label for="Other">Other</label> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label> Enter your PAN Number</label>
+                </td>
+                <td>
+                    <input type = "text" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" name="pan" id="pan" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label> Enter your Contact Number</label>
+                </td>
+                <td>
+                    <input type = "text" pattern="[0-9]{10}" name="contact" id="contact" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Enter Residential Address</label>
+                </td>
+                <td>
+                    <input type="text" name="address" id="address" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Enter your email</label>
+                </td>
+                <td>
+                    <input type="email" name="email" id="email" placeholder="abcs@gmail.com" required />
+                </td>
+            </tr>
+        </table>
+            <h2>Employment Details</h2>
+        <table>
+            <tr>
+                <td>
+                    <label>Enter your current employer</label>
+                </td>
+                <td>
+                    <input type="text" name="employer" id="employer" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Enter your position</label>
+                </td>
+                <td>
+                    <input type="text"  name="name" id="name" required />
+                </td>
+            </tr>
+            <td>
+                    <label>Select Monthly Income</label>
+                </td>
+                <td>
+                    <select id="income" name="income" required>
+                        <option value="">Select</option>
+                        <option value="1">15000-30000</option>
+                        <option value="2">30000-60000</option>
+                        <option value="3">60000-90000</option>
+                        <option value="4">90000-150000</option>
+                        <option value="5">>150000</option>
+                    </select>
+                </td>
+             <tr>
+                <td>
+                    <label>Enter your other sources of income</label>
+                </td>
+                <td>
+                    <input type="text"  name="name" id="name" required />
+                </td>
+            </tr>
+            <tr>
+                <TD>
+                    <input type ="SUBMIT"/>
+                    <input type ="reset"/>
+                </TD>
+            </tr>
+        </table>
+       
+    </form>
+</body>
+</html>
