@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    function showFormData()
+{
+    let result = "";
+
+    let name = document.getElementById("ename").value;
+    result += "NAME ---" + name + "\n";
+
+    let pan = document.getElementById("pan").value;
+    result += "PAN NUMBER ---"+pan + "\n";
+
+    let skills = document.getElementsByName("skills");
+    result += "Skills--";
+
+    for(let i=0;i<skills.length;i++)
+    {
+        if(skills[i].checked)
+        {
+            result += skills[i].nextElementSibling.innerText + " ";
+        }
+    }
+
+    result += "\n";
+
+    let gender = document.getElementsByName("gender");
+
+    for(let i=0;i<gender.length;i++)
+    {
+        if(gender[i].checked)
+        {
+            result += "GENDER ---" + gender[i].value + "\n";
+        }
+    }
+
+    let city = document.getElementById("city");
+    result += "CITY ---" + city.options[city.selectedIndex].text + "\n";
+
+    let email = document.getElementById("email").value;
+    result += "EMAIL ---" + email + "\n";
+
+    let dob = document.getElementById("dob").value;
+    result += "DATE OF BIRTH ---" + dob + "\n";
+
+    let age = document.getElementById("age").value;
+    result += "AGE ---" + age + "\n";
+
+    console.log(result);
+
+    
+}
+    </script>
+</head>
+<body>
+    <form onsubmit="showFormData(); return false;" >  
+        <h1>EMPLOYEE REGISTRATION FORM</h1>
+        <table> 
+            <tr>    
+                <td>
+                    <label> Enter your name</label>
+                </td>
+                <td>
+                    <input type = "text" pattern="[A-Z][a-z]{2,}" name="name" id="ename"  />
+                </td>
+                 <td>
+            </tr>
+            <tr>    
+                <td>
+                    <label> Enter your PAN Number</label>
+                </td>
+                <td>
+                    <input type = "text" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" name="pan" id="pan"  />
+                </td>
+                 <td>
+            </tr>
+            <tr>
+                <td>
+                    <label>enter your skills</label>
+                </td>
+                <td>
+                    <input type="checkbox" name="skills" value="1" id="java" />
+                    <label  name ="lblSkills"for="java">Java</label>
+                    <input type="checkbox" name="skills" value="2" id="python" />
+                    <label name ="lblSkills"for="python">Python</label>
+                    <input type="checkbox" name="skills" value="3" id="javascript" />
+                    <label name ="lblSkills"for="javascript">JavaScript</label>
+                    <input type="checkbox" name="skills" value="4" id="csharp" />
+                    <label name ="lblSkills"for="csharp">C#</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Select Gender</label>
+                </td>
+                <td>
+                      <input type="radio" id="male" name="gender" value="Male">
+                      <label for="male">Male</label>              
+                     <input type="radio" id="female" name="gender" value="Female">
+                      <label for="female">Female</label>             
+                    <input type="radio" id="other" name="gender" value="Other">
+                     <label for="other">Other</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Select City</label>
+                </td>
+                <td>
+                    <select id="city" name="city" >
+                        <option value="">Select</option>
+                        <option value="1">DELHI</option>
+                        <option value="2">MUMBAI</option>
+                        <option value="3">KOLKATA</option>
+                        <option value="4">CHENNAI</option>
+                        <option value="5">CHD</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Enter your email</label>
+                </td>
+                <td>
+                    <input type="email" name="email" id="email" placeholder="abcs@gmail.com"  />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Select DOB</label>
+                </td>
+                <td>
+                    <input type="date" name="dob" id="dob" min="2000-01-01" max="2023-12-31"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Enter age</label>
+                </td>
+                <td>
+                    <input type="number" name="age" id="age" min="18" max="50"  />
+                </td>
+
+            </tr>
+            <tr>
+                <TD>
+                    <input type ="SUBMIT"/>
+                    <input type ="reset"/>
+                </TD>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
