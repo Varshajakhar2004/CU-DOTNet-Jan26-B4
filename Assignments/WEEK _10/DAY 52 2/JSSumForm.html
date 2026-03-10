@@ -2,47 +2,50 @@
 <html>
 <head>
 <title>Sum of Two Numbers</title>
-
 <script>
-function checkSum(){
+function checkN1(){
+    let a = document.getElementById("n1");
+
+    if(a.value == ""){
+        a.style.backgroundColor = "red";
+    }
+    else if(isNaN(a.value)){
+        a.style.backgroundColor = "yellow";
+    }
+    else{
+        a.style.backgroundColor = "white";
+    }
+}
+
+function checkN2(){
     let a = document.getElementById("n1");
     let b = document.getElementById("n2");
     let r = document.getElementById("result");
 
-    if(a.value == "" || b.value == ""){
-        if(a.value == "") a.style.backgroundColor = "red";
-        if(b.value == "") b.style.backgroundColor = "red";
+    if(b.value == ""){
+        b.style.backgroundColor = "red";
         r.value = "ERROR";
     }
-    else if(isNaN(a.value) || isNaN(b.value)){
-        if(isNaN(a.value)) a.style.backgroundColor = "yellow";
-        if(isNaN(b.value)) b.style.backgroundColor = "yellow";
+    else if(isNaN(b.value)){
+        b.style.backgroundColor = "yellow";
         r.value = "ERROR";
     }
     else{
-        a.style.backgroundColor = "white";
         b.style.backgroundColor = "white";
-        r.value = Number(a.value) + Number(b.value);
+
+        if(!isNaN(a.value) && a.value != ""){
+            r.value = Number(a.value) + Number(b.value);
+        }
     }
 }
 </script>
-
 </head>
-
 <body>
-
 <h3>Sum of 2 Numbers</h3>
-
-
-<input type="text" id="n1" placeholder="n1" onblur="checkSum()">
+<input type="text" id="n1" placeholder="n1" onblur="checkN1()">
 +
-
-
-<input type="text" id="n2" placeholder="n2" onblur="checkSum()">
-
+<input type="text" id="n2" placeholder="n2" onblur="checkN2()">
 =
-
-
 <input type="text" id="result" placeholder="n1+n2" readonly>
 
 </body>
