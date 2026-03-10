@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClearDebt Loan Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<script>
+
+</script>
+<body>
+    <H2>Loan INFO</H2>
+    <div class="border p-4 w-25">
+
+    <form onsubmit="generateSchedule(); return false;">
+    Loan Amount :
+    <input type="number" id="amount" required><br><br>
+
+    Interest Rate (%) :
+    <input type="number" id="rate" step="0.01" required><br><br>
+
+    Months :<br>
+    <input type="number" id="months" required><br><br>
+
+    <button type="submit">Calculate</button>
+    
+</form>
+</div>
+
+     <table border="1" cellpadding="15"  class="table table-striped text-left" >   
+         <thead>
+        <tr>
+            <th>SNO</th>
+            <th>Loan Left</th>
+            <th>EMI</th>
+            <th>Principal</th>
+            <th>Interest</th>
+            <th>Remaining Balance</th>
+        </tr>
+    </thead>
+    <tbody id="scheduleBody">
+        </tbody>
+</table>
+<script>
+function generateSchedule() {
+
+    let Principalamount = Number(document.getElementById("amount").value);
+    let rateofInterest = Number(document.getElementById("rate").value) / 100 / 12;
+    let Months = Number(document.getElementById("months").value);
+
+    let emi = (Principalamount * rateofInterest * Math.pow(1 + rateofInterest, Months)) /
+              (Math.pow(1 + rateofInterest, Months) - 1);
+
+    let scheduleBody = document.getElementById("scheduleBody");
+    scheduleBody.innerHTML = "";
+
+    let balance = Principalamount;
+
+    for (let i = 1; i <= Months; i++) {
+
+        let interest = balance * rateofInterest;
+        let principal = emi - interest;
+        let Balance = balance - principal;
+
+        let row = `<tr>
+            <td>${i}</td>
+            <td>${balance.toFixed(2)}</td>
+            <td>${emi.toFixed(2)}</td>
+            <td>${principal.toFixed(2)}</td>
+            <td>${interest.toFixed(2)}</td>
+            <td>${Balance.toFixed(2)}</td>
+        </tr>`;
+
+        scheduleBody.innerHTML += row;
+
+        balance = Balance;
+    }
+}
+</script>
+
+</body>
+</html>
