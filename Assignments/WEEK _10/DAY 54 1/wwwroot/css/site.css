@@ -20,3 +20,19 @@ html {
 body {
   margin-bottom: 60px;
 }
+.navbar-pink {
+    background-color: #d63384; /* pink-500 */
+}
+
+.light-pink {
+    background-color: #f783ac; /* pink-300 */
+}
+
+.btn-pink {
+    background-color: #d63384;
+    color: white;
+    border: none;
+}
+ .btn-pink:hover {
+        background-color: #b02a6b;
+    }
