@@ -1,29 +1,56 @@
-﻿
-@{
-    ViewData["Title"] = "Software";
+﻿@{
+    ViewData["Title"] = "Software Products";
 }
+
 <div class="container mt-4">
 
     <h2>Software Products</h2>
 
-    <table class="table table-bordered">
+    <p>
+        Our company develops powerful software solutions designed to improve
+        business productivity, data management, and digital transformation.
+    </p>
 
-        <tr>
-            <th>Product</th>
-            <th>Status</th>
-        </tr>
+    <table class="table table-bordered table-striped mt-4">
 
-        <tr>
-            <td>CRM Software</td>
-            <td><span class="badge bg-success">Available</span></td>
-        </tr>
+        <thead class="table-dark">
+            <tr>
+                <th>Software</th>
+                <th>Description</th>
+                <th>Status</th>
+            </tr>
+        </thead>
 
-        <tr>
-            <td>ERP System</td>
-            <td><span class="badge bg-warning">Coming Soon</span></td>
-        </tr>
+        <tbody>
+
+            <tr>
+                <td>CRM System</td>
+                <td>Customer relationship management software for managing clients and sales.</td>
+                <td><span class="badge bg-success">Available</span></td>
+            </tr>
+
+            <tr>
+                <td>Inventory Manager</td>
+                <td>Helps businesses track stock, orders, and product availability.</td>
+                <td><span class="badge bg-success">Available</span></td>
+            </tr>
+
+            <tr>
+                <td>ERP Solution</td>
+                <td>Enterprise resource planning system for managing business operations.</td>
+                <td><span class="badge bg-warning">Coming Soon</span></td>
+            </tr>
+
+            <tr>
+                <td>HR Management</td>
+                <td>Software to manage employee records, attendance, and payroll.</td>
+                <td><span class="badge bg-info">Beta</span></td>
+            </tr>
+
+        </tbody>
 
     </table>
 
+</div>
 </div>
 

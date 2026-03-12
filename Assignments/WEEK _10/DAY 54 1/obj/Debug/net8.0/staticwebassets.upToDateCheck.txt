@@ -1,6 +1,17 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\background.jpg
+wwwroot\images\cc.jpg
 wwwroot\images\cu logo.jpg
+wwwroot\images\digital.jpg
+wwwroot\images\digital.webp
+wwwroot\images\download (1).jpg
+wwwroot\images\download.jpg
+wwwroot\images\images.jpg
+wwwroot\images\IT.png
+wwwroot\images\sd.jpg
+wwwroot\images\Software.jpg
+wwwroot\images\wd.jpg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
