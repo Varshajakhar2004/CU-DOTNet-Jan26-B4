@@ -1,0 +1,75 @@
+﻿@model List<TheCorporatePulsePortal.Models.Employee>
+
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Corporate Pulse Dashboard</h2>
+    <div class="alert alert-info shadow-sm">
+        <strong>@ViewBag.Announcement</strong>
+    </div>
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-primary text-white">
+            Department Information
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">
+                Department: @ViewData["DepartmentName"]
+            </h5>
+            @if ((bool)ViewData["IsActive"])
+            {
+                <span class="badge bg-success fs-6">
+                    Status: Active
+                </span>
+            }
+            else
+            {
+                <span class="badge bg-danger fs-6">
+                    Status: Under Maintenance
+                </span>
+            }
+        </div>
+    </div>
+    <div class="card shadow-sm">
+
+        <div class="card-header bg-dark text-white">
+            Employee List
+        </div>
+        <input type="text" id="searchBox" class="form-control mb-3" placeholder="Search employee...">
+        <div class="card-body">
+            <table class="table table-striped table-hover table-bordered text-center">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var emp in Model)
+                    {
+                        <tr>
+                            <td>@emp.EmpId</td>
+                            <td>@emp.EmpName</td>
+                            <td>@emp.Position</td>
+                            <td>₹ @emp.Salary</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <script>
+                            document.getElementById("searchBox").addEventListener("keyup", function() {
+                                let filter = this.value.toLowerCase();
+                                let rows = document.querySelectorAll("tbody tr");
+
+                                rows.forEach(row => {
+                                    let text = row.innerText.toLowerCase();
+                                    row.style.display = text.includes(filter) ? "" : "none";
+                                });
+                            });
+            </script>
+        </div>
+    </div>
+</div>

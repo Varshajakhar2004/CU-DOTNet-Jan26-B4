@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\varsha\\OneDrive\\Desktop\\Capgemini Training\\CompanyPortal\\CompanyPortal\\CompanyPortal.csproj": {}
+    "C:\\Users\\varsha\\OneDrive\\Desktop\\Capgemini Training\\CU-DOTNet-Jan26-B4\\Assignments\\WEEK _10\\DAY 54 1\\CompanyPortal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\varsha\\OneDrive\\Desktop\\Capgemini Training\\CompanyPortal\\CompanyPortal\\CompanyPortal.csproj": {
+    "C:\\Users\\varsha\\OneDrive\\Desktop\\Capgemini Training\\CU-DOTNet-Jan26-B4\\Assignments\\WEEK _10\\DAY 54 1\\CompanyPortal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\varsha\\OneDrive\\Desktop\\Capgemini Training\\CompanyPortal\\CompanyPortal\\CompanyPortal.csproj",
+        "projectUniqueName": "C:\\Users\\varsha\\OneDrive\\Desktop\\Capgemini Training\\CU-DOTNet-Jan26-B4\\Assignments\\WEEK _10\\DAY 54 1\\CompanyPortal.csproj",
         "projectName": "CompanyPortal",
-        "projectPath": "C:\\Users\\varsha\\OneDrive\\Desktop\\Capgemini Training\\CompanyPortal\\CompanyPortal\\CompanyPortal.csproj",
+        "projectPath": "C:\\Users\\varsha\\OneDrive\\Desktop\\Capgemini Training\\CU-DOTNet-Jan26-B4\\Assignments\\WEEK _10\\DAY 54 1\\CompanyPortal.csproj",
         "packagesPath": "C:\\Users\\varsha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\varsha\\OneDrive\\Desktop\\Capgemini Training\\CompanyPortal\\CompanyPortal\\obj\\",
+        "outputPath": "C:\\Users\\varsha\\OneDrive\\Desktop\\Capgemini Training\\CU-DOTNet-Jan26-B4\\Assignments\\WEEK _10\\DAY 54 1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -19,81 +19,81 @@ build_property.TargetFrameworkIdentifier = .NETCoreApp
 build_property.TargetFrameworkVersion = v8.0
 build_property.RootNamespace = CompanyPortal
 build_property.RootNamespace = CompanyPortal
-build_property.ProjectDir = C:\Users\varsha\OneDrive\Desktop\Capgemini Training\CompanyPortal\CompanyPortal\
+build_property.ProjectDir = C:\Users\varsha\OneDrive\Desktop\Capgemini Training\CU-DOTNet-Jan26-B4\Assignments\WEEK _10\DAY 54 1\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\varsha\OneDrive\Desktop\Capgemini Training\CompanyPortal\CompanyPortal
+build_property.MSBuildProjectDirectory = C:\Users\varsha\OneDrive\Desktop\Capgemini Training\CU-DOTNet-Jan26-B4\Assignments\WEEK _10\DAY 54 1
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CompanyPortal/CompanyPortal/Views/Contact/Index.cshtml]
+[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CU-DOTNet-Jan26-B4/Assignments/WEEK _10/DAY 54 1/Views/Contact/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CompanyPortal/CompanyPortal/Views/Home/About.cshtml]
+[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CU-DOTNet-Jan26-B4/Assignments/WEEK _10/DAY 54 1/Views/Home/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CompanyPortal/CompanyPortal/Views/Home/Index.cshtml]
+[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CU-DOTNet-Jan26-B4/Assignments/WEEK _10/DAY 54 1/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CompanyPortal/CompanyPortal/Views/Home/Privacy.cshtml]
+[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CU-DOTNet-Jan26-B4/Assignments/WEEK _10/DAY 54 1/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CompanyPortal/CompanyPortal/Views/Index.cshtml]
+[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CU-DOTNet-Jan26-B4/Assignments/WEEK _10/DAY 54 1/Views/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CompanyPortal/CompanyPortal/Views/Products/Index.cshtml]
+[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CU-DOTNet-Jan26-B4/Assignments/WEEK _10/DAY 54 1/Views/Products/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CompanyPortal/CompanyPortal/Views/Products/Software.cshtml]
+[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CU-DOTNet-Jan26-B4/Assignments/WEEK _10/DAY 54 1/Views/Products/Software.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcU29mdHdhcmUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CompanyPortal/CompanyPortal/Views/Products/Tools.cshtml]
+[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CU-DOTNet-Jan26-B4/Assignments/WEEK _10/DAY 54 1/Views/Products/Tools.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcVG9vbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CompanyPortal/CompanyPortal/Views/Services.cshtml]
+[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CU-DOTNet-Jan26-B4/Assignments/WEEK _10/DAY 54 1/Views/Services.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CompanyPortal/CompanyPortal/Views/Services/Consulting.cshtml]
+[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CU-DOTNet-Jan26-B4/Assignments/WEEK _10/DAY 54 1/Views/Services/Consulting.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZXNcQ29uc3VsdGluZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CompanyPortal/CompanyPortal/Views/Services/Index.cshtml]
+[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CU-DOTNet-Jan26-B4/Assignments/WEEK _10/DAY 54 1/Views/Services/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CompanyPortal/CompanyPortal/Views/Services/Training.cshtml]
+[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CU-DOTNet-Jan26-B4/Assignments/WEEK _10/DAY 54 1/Views/Services/Training.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZXNcVHJhaW5pbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CompanyPortal/CompanyPortal/Views/Shared/Error.cshtml]
+[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CU-DOTNet-Jan26-B4/Assignments/WEEK _10/DAY 54 1/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CompanyPortal/CompanyPortal/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CU-DOTNet-Jan26-B4/Assignments/WEEK _10/DAY 54 1/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CompanyPortal/CompanyPortal/Views/_ViewImports.cshtml]
+[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CU-DOTNet-Jan26-B4/Assignments/WEEK _10/DAY 54 1/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CompanyPortal/CompanyPortal/Views/_ViewStart.cshtml]
+[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CU-DOTNet-Jan26-B4/Assignments/WEEK _10/DAY 54 1/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CompanyPortal/CompanyPortal/Views/Shared/_Layout.cshtml]
+[C:/Users/varsha/OneDrive/Desktop/Capgemini Training/CU-DOTNet-Jan26-B4/Assignments/WEEK _10/DAY 54 1/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-o6ekffagx9
