@@ -1,0 +1,90 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    .hero {
+        /* more subtle, modern navy -> teal gradient with depth */
+        background: linear-gradient(135deg, #0f172a 0%, #0369a1 100%);
+        color: white;
+        padding: 4rem 0;
+        border-radius: 0.5rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 10px 30px rgba(2,6,23,0.35);
+    }
+
+    .hero .illustration svg { max-width: 100%; height: auto; }
+
+    .feature-card {
+        background: #fff;
+        border: 1px solid rgba(13,110,253,0.06);
+        border-radius: 0.5rem;
+        padding: 1.25rem;
+        box-shadow: 0 6px 18px rgba(2,6,23,0.04);
+        color: #0f172a;
+    }
+
+    .svg-icon { width: 48px; height: 48px; margin-bottom: 0.75rem; fill: #0d6efd; }
+
+    @@media (max-width: 767px) {
+        .hero { padding: 2rem 0; }
+        .svg-icon { width: 40px; height: 40px; }
+    }
+</style>
+
+<div class="container">
+    <div class="hero">
+        <div class="row align-items-center">
+            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center text-center">
+                <h1 class="display-4 fw-bold">Welcome to QuickLoan</h1>
+                <p class="lead">Fast, simple and reliable loans tailored to your needs. Compare plans, apply online and get decisions quickly.</p>
+                <p>
+                    <a asp-controller="Loan" asp-action="Index" class="btn btn-light btn-lg me-2">Browse Loans</a>
+                    <a asp-controller="Loan" asp-action="Create" class="btn btn-outline-light btn-lg">Apply Now</a>
+                </p>
+            </div>
+            <div class="col-md-6 text-center illustration">
+                <!-- Inline SVG illustration (loan/finance themed) -->
+                <svg viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+                    <rect x="32" y="96" width="576" height="320" rx="24" ry="24" fill="#fff" opacity="0.06" />
+                    <path d="M160 208h320v64H160z" fill="#fff" opacity="0.12"/>
+                    <path d="M192 272h256v16H192z" fill="#fff" opacity="0.08"/>
+                    <g transform="translate(120,96) scale(0.7)">
+                        <circle cx="320" cy="120" r="80" fill="#fff" opacity="0.06" />
+                        <path d="M320 84c-20 0-36 16-36 36s16 36 36 36 36-16 36-36-16-36-36-36zm0 52c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16-7.2 16-16 16z" fill="#fff" opacity="0.9"/>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="feature-card text-center">
+                <svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M12 1L3 5v6c0 5.25 3.5 10.74 9 12 5.5-1.26 9-6.75 9-12V5l-9-4z"/>
+                </svg>
+                <h5 class="mt-2">Quick Approval</h5>
+                <p class="mb-0">Get decisions fast so you can move forward with your plans.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-card text-center">
+                <svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M3 3h18v2H3zM7 7h10v10H7z"/>
+                </svg>
+                <h5 class="mt-2">Transparent Rates</h5>
+                <p class="mb-0">Clear terms and no hidden fees — ever.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-card text-center">
+                <svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M12 2l3 7h7l-5.6 4 2 7L12 16l-6.4 4 2-7L2 9h7z"/>
+                </svg>
+                <h5 class="mt-2">Support</h5>
+                <p class="mb-0">Friendly support to help you choose the right loan.</p>
+            </div>
+        </div>
+    </div>
+</div>

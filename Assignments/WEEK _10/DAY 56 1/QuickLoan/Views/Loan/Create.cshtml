@@ -1,0 +1,70 @@
+﻿
+@model QuickLoan.Models.Loan
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<style>
+    .create-card { max-width: 720px; margin: 2rem auto; }
+    .create-card .card-header { background: linear-gradient(90deg,#0369a1,#0f172a); color: #fff; }
+    .form-icon { width: 20px; height: 20px; display: inline-block; }
+</style>
+
+<div class="container create-card">
+    <div class="card shadow-sm">
+        <div class="card-header">
+            <h3 class="mb-0">Create Loan</h3>
+            <small class="text-white-50">Enter borrower and lender details to add a new loan</small>
+        </div>
+        <div class="card-body">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                <div class="mb-3">
+                    <label asp-for="BorrowerName" class="form-label"></label>
+                    <div class="input-group">
+                        <span class="input-group-text" aria-hidden="true">
+                            <!-- user icon -->
+                            <svg class="form-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-4 0-8 2-8 6v2h16v-2c0-4-4-6-8-6z"/></svg>
+                        </span>
+                        <input asp-for="BorrowerName" class="form-control" placeholder="Full name of borrower" />
+                    </div>
+                    <span asp-validation-for="BorrowerName" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="LenderName" class="form-label"></label>
+                    <div class="input-group">
+                        <span class="input-group-text" aria-hidden="true">
+                            <!-- bank icon -->
+                            <svg class="form-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 7l11 5 11-5-11-5zm0 7L3.1 7 12 4l8.9 3L12 9zM3 10v7h18v-7H3z"/></svg>
+                        </span>
+                        <input asp-for="LenderName" class="form-control" placeholder="Lender or institution" />
+                    </div>
+                    <span asp-validation-for="LenderName" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Amount" class="form-label"></label>
+                    <div class="input-group">
+                        <span class="input-group-text">$</span>
+                        <input asp-for="Amount" class="form-control" placeholder="0.00" />
+                    </div>
+                    <span asp-validation-for="Amount" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3 form-check">
+                    <input class="form-check-input" asp-for="IsSettled" id="IsSettled" />
+                    <label class="form-check-label" for="IsSettled">@Html.DisplayNameFor(model => model.IsSettled)</label>
+                </div>
+
+                <div class="d-flex gap-2">
+                    <button type="submit" class="btn btn-primary">Create</button>
+                    <a asp-action="Index" class="btn btn-outline-secondary">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

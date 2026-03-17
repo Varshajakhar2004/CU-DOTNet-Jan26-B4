@@ -1,0 +1,74 @@
+﻿@model IEnumerable<QuickLoan.Models.Loan>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+    .page-header {
+        background: linear-gradient(90deg,#0369a1,#0f172a);
+        color: #fff;
+        padding: 1rem 1.25rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 6px 18px rgba(2,6,23,0.2);
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .page-header .btn { min-width: 120px; }
+</style>
+
+<div class="page-header">
+    <h1 class="mb-0">Loans</h1>
+    <a asp-action="Create" class="btn btn-light">Create New</a>
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BorrowerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LenderName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsSettled)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BorrowerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LenderName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsSettled)
+            </td>
+            <td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">Details</a>
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
