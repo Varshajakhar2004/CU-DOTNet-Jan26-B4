@@ -1,8 +1,101 @@
-﻿@{
+﻿@model FinTrackPro.Models.DashboardViewModel
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome To FinTrack Pro</h1>
-    <a class="btn btn-primary" href="Accounts/Index" role="button">Accounts</a>
+<div class="container">
+    <div class="text-center my-4">
+        <h1 class="display-4">Welcome To FinTrack Pro</h1>
+        <p class="lead">Track accounts, transactions and balances at a glance.</p>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Accounts</h5>
+                    <p class="card-text display-6">@Model.TotalAccounts</p>
+                    <a href="/Accounts/Index" class="btn btn-light btn-sm">View Accounts</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-dark bg-light mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Total Balance</h5>
+                    <p class="card-text display-6">@String.Format("{0:C}", Model.TotalBalance)</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-success mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Total Credit</h5>
+                    <p class="card-text display-6">@String.Format("{0:C}", Model.TotalCredit)</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-danger mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Total Debit</h5>
+                    <p class="card-text display-6">@String.Format("{0:C}", Model.TotalDebit)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            Recent Transactions
+            <a class="btn btn-sm btn-primary float-end" href="/Transactions/Index">View All</a>
+        </div>
+        <div class="card-body">
+            @if (Model.RecentTransactions != null && Model.RecentTransactions.Any())
+            {
+                <table class="table table-sm table-striped">
+                    <thead>
+                        <tr>
+                            <th>Account</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Category</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var t in Model.RecentTransactions)
+                        {
+                                <tr>
+                                <td>@(t.Account?.AccountName ?? t.AccountId.ToString())</td>
+                                <td>@t.Description</td>
+                                <td>
+                                    @if ((t.Category ?? "").Equals("Credit", System.StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <span class="text-success">@String.Format("{0:C}", t.Amount)</span>
+                                    }
+                                    else if ((t.Category ?? "").Equals("Debit", System.StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <span class="text-danger">@String.Format("{0:C}", t.Amount)</span>
+                                    }
+                                    else
+                                    {
+                                        @String.Format("{0:C}", t.Amount)
+                                    }
+                                </td>
+                                <td>@t.Category</td>
+                                <td>@t.Date.ToShortDateString()</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <p>No recent transactions.</p>
+            }
+        </div>
+    </div>
+
 </div>

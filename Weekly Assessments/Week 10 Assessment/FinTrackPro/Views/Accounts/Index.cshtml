@@ -1,202 +1,214 @@
-﻿@* @model IEnumerable<FinTrackPro.Models.Account>
+﻿@model IEnumerable<FinTrackPro.Models.Account>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Accounts";
 }
 
-<h1>Accounts</h1>
+<div class="container">
+    <div class="d-flex align-items-center justify-content-between my-3">
+        <h1>Accounts</h1>
+        <div>
+            <a asp-action="Create" class="btn btn-primary">Add New Account</a>
+            <button id="expandAll" class="btn btn-outline-secondary">Expand All</button>
+            <button id="collapseAll" class="btn btn-outline-secondary">Collapse All</button>
+            <button id="exportCsv" class="btn btn-outline-success">Export CSV</button>
+        </div>
+    </div>
 
-<p>
-    <a asp-action="Create">Add New Account</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.AccountNumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AccountHolderName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AccountName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Balance)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.AccountNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AccountHolderName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AccountName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Balance)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <div class="row mb-3">
+        <div class="col-md-4">
+            <input id="accountSearch" class="form-control" placeholder="Search account number, holder or name..." />
+        </div>
+    </div>
 
- *@
-@model IEnumerable<FinTrackPro.Models.Account>
+    <div class="table-responsive">
+        <table class="table table-hover" id="accountsTable">
+            <thead>
+                <tr>
+                    <th style="width:32px"></th>
+                    <th>@Html.DisplayNameFor(m => m.AccountNumber)</th>
+                    <th>@Html.DisplayNameFor(m => m.AccountHolderName)</th>
+                    <th>@Html.DisplayNameFor(m => m.AccountName)</th>
+                    <th class="text-end">@Html.DisplayNameFor(m => m.Balance)</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    var totalCredit = item.Transactions?.Where(t => (t.Category ?? "").Equals("Credit", System.StringComparison.OrdinalIgnoreCase)).Sum(t => t.Amount) ?? 0.0;
+                    var totalDebit = item.Transactions?.Where(t => (t.Category ?? "").Equals("Debit", System.StringComparison.OrdinalIgnoreCase)).Sum(t => t.Amount) ?? 0.0;
+                    var finalBalance = item.Balance + totalCredit - totalDebit;
 
-@{
-    ViewData["Title"] = "Index";
-}
+                    <tr class="table-row-clickable" tabindex="0" data-bs-toggle="collapse" data-bs-target="#transactions-@item.Id" aria-expanded="false" data-acc-number="@item.AccountNumber" data-acc-holder="@item.AccountHolderName" data-acc-name="@item.AccountName" data-total-credit="@totalCredit" data-total-debit="@totalDebit" data-final-balance="@finalBalance">
+                        <td class="text-center align-middle pe-0"><span class="chev">▶</span></td>
+                        <td>@item.AccountNumber</td>
+                        <td>@item.AccountHolderName</td>
+                        <td>@item.AccountName</td>
+                        <td class="text-end">@String.Format("{0:C}", item.Balance)</td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id" onclick="event.stopPropagation();">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.Id" onclick="event.stopPropagation();">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id" onclick="event.stopPropagation();">Delete</a>
+                        </td>
+                    </tr>
 
-<h1>Accounts</h1>
+                    <tr class="collapse" id="transactions-@item.Id">
+                        <td colspan="6">
+                            <h5>Transactions</h5>
 
-<p>
-    <a asp-action="Create" class="btn btn-primary">Add New Account</a>
-</p>
+                            @if (item.Transactions != null && item.Transactions.Any())
+                            {
+                                <table class="table table-sm table-bordered mb-2">
+                                    <thead>
+                                        <tr>
+                                            <th>Description</th>
+                                            <th class="text-end">Amount</th>
+                                            <th>Category</th>
+                                            <th>Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var t in item.Transactions)
+                                        {
+                                            var isGreenCategory = (t.Category ?? "").ToLower() == "green";
+                                            <tr class='@(isGreenCategory ? "table-success" : "")'>
+                                                <td>@t.Description</td>
+                                                <td class="text-end">
+                                                    @if ((t.Category ?? "").Equals("Credit", System.StringComparison.OrdinalIgnoreCase))
+                                                    {
+                                                        <span class="text-success">@String.Format("{0:C}", t.Amount)</span>
+                                                    }
+                                                    else if ((t.Category ?? "").Equals("Debit", System.StringComparison.OrdinalIgnoreCase))
+                                                    {
+                                                        <span class="text-danger">@String.Format("{0:C}", t.Amount)</span>
+                                                    }
+                                                    else
+                                                    {
+                                                        @String.Format("{0:C}", t.Amount)
+                                                    }
+                                                </td>
+                                                <td>@t.Category</td>
+                                                <td>@t.Date.ToShortDateString()</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.AccountNumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AccountHolderName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AccountName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Balance)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
+                                <div class="d-flex justify-content-end gap-4 mt-2">
+                                    <div>
+                                        <strong>Total Credit:</strong>
+                                        <span class="text-success">@String.Format("{0:C}", totalCredit)</span>
+                                    </div>
+                                    <div>
+                                        <strong>Total Debit:</strong>
+                                        <span class="text-danger">@String.Format("{0:C}", totalDebit)</span>
+                                    </div>
+                                    <div>
+                                        <strong>Final Balance:</strong>
+                                        <span>@String.Format("{0:C}", finalBalance)</span>
+                                    </div>
+                                </div>
+                            }
+                            else
+                            {
+                                <p>No transactions available.</p>
+                            }
 
-    <tbody>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
 
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AccountNumber)
-                </td>
+<style>
+    .table-row-clickable { cursor: pointer; }
+    .chev { display:inline-block; width:18px; transition: transform .15s ease; }
+    .table-row-clickable.expanded .chev { transform: rotate(90deg); }
+</style>
 
-                <td>
-                    @Html.DisplayFor(modelItem => item.AccountHolderName)
-                </td>
+<script>
+    (function(){
+        // Toggle chevrons and keyboard accessibility
+        document.querySelectorAll('.table-row-clickable').forEach(function(row){
+            var target = row.getAttribute('data-bs-target');
+            if (!target) return;
+            var collapseEl = document.querySelector(target);
+            if (!collapseEl) return;
 
-                <td>
-                    @Html.DisplayFor(modelItem => item.AccountName)
-                </td>
+            row.setAttribute('aria-expanded', collapseEl.classList.contains('show'));
+            if (collapseEl.classList.contains('show')) row.classList.add('expanded');
 
-                <td>
-                    @Html.DisplayFor(modelItem => item.Balance)
-                </td>
+            collapseEl.addEventListener('shown.bs.collapse', function(){
+                row.setAttribute('aria-expanded','true');
+                row.classList.add('expanded');
+                var chev = row.querySelector('.chev'); if (chev) chev.textContent = '▼';
+            });
 
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> |
+            collapseEl.addEventListener('hidden.bs.collapse', function(){
+                row.setAttribute('aria-expanded','false');
+                row.classList.remove('expanded');
+                var chev = row.querySelector('.chev'); if (chev) chev.textContent = '▶';
+            });
 
-                    <!-- Accordion Button -->
-                    <button class="btn btn-sm btn-dark text-white"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#transactions-@item.Id">
-                        View Transactions
-                    </button>
-                </td>
-            </tr>
+            row.addEventListener('keydown', function(e){
+                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); row.click(); }
+            });
+        });
 
-            <!-- Accordion Transactions Row -->
-
-            <tr class="collapse" id="transactions-@item.Id">
-                <td colspan="5">
-
-                    <h5>Transactions</h5>
-
-                    @if (item.Transactions != null && item.Transactions.Any())
-                    {
-                        var totalCredit = item.Transactions.Where(t => (t.Category ?? "").Equals("Credit", System.StringComparison.OrdinalIgnoreCase)).Sum(t => t.Amount);
-                        var totalDebit = item.Transactions.Where(t => (t.Category ?? "").Equals("Debit", System.StringComparison.OrdinalIgnoreCase)).Sum(t => t.Amount);
-                        var finalBalance = item.Balance + totalCredit - totalDebit; // compute final balance by applying credits then debits
-
-                        <table class="table table-sm table-bordered">
-
-                            <thead>
-                                <tr>
-                                    <th>Description</th>
-                                    <th>Amount</th>
-                                    <th>Category</th>
-                                    <th>Date</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-
-                                @foreach (var t in item.Transactions)
-                                {
-                                    var isGreenCategory = (t.Category ?? "").ToLower() == "green";
-                                    <tr class='@(isGreenCategory ? "table-success" : "")'>
-                                        <td>@t.Description</td>
-                                        <td>
-                                            @if ((t.Category ?? "").Equals("Credit", System.StringComparison.OrdinalIgnoreCase))
-                                            {
-                                                <span class="text-success">@String.Format("{0:C}", t.Amount)</span>
-                                            }
-                                            else if ((t.Category ?? "").Equals("Debit", System.StringComparison.OrdinalIgnoreCase))
-                                            {
-                                                <span class="text-danger">@String.Format("{0:C}", t.Amount)</span>
-                                            }
-                                            else
-                                            {
-                                                @String.Format("{0:C}", t.Amount)
-                                            }
-                                        </td>
-                                        <td>@t.Category</td>
-                                        <td>@t.Date.ToShortDateString()</td>
-                                    </tr>
-                                }
-
-                            </tbody>
-
-                        </table>
-
-                        <div class="d-flex justify-content-end gap-4 mt-2">
-                            <div>
-                                <strong>Total Credit:</strong>
-                                <span class="text-success">@String.Format("{0:C}", totalCredit)</span>
-                            </div>
-                            <div>
-                                <strong>Total Debit:</strong>
-                                <span class="text-danger">@String.Format("{0:C}", totalDebit)</span>
-                            </div>
-                            <div>
-                                <strong>Final Balance:</strong>
-                                <span>@String.Format("{0:C}", finalBalance)</span>
-                            </div>
-                        </div>
-                    }
-                    else
-                    {
-                        <p>No transactions available.</p>
-                    }
-
-                </td>
-            </tr>
+        // Search filter for accounts
+        var search = document.getElementById('accountSearch');
+        var rows = document.querySelectorAll('#accountsTable tbody tr.table-row-clickable');
+        if (search) {
+            search.addEventListener('input', function(){
+                var q = search.value.trim().toLowerCase();
+                rows.forEach(function(r){
+                    var number = r.getAttribute('data-acc-number') || '';
+                    var holder = r.getAttribute('data-acc-holder') || '';
+                    var name = r.getAttribute('data-acc-name') || '';
+                    var txt = (number + ' ' + holder + ' ' + name).toLowerCase();
+                    r.style.display = q && txt.indexOf(q) === -1 ? 'none' : '';
+                });
+            });
         }
 
-    </tbody>
+        // Expand/Collapse all
+        document.getElementById('expandAll')?.addEventListener('click', function(){
+            document.querySelectorAll('#accountsTable tbody tr.collapse').forEach(function(c){
+                var bs = bootstrap.Collapse.getOrCreateInstance(c);
+                bs.show();
+            });
+        });
+        document.getElementById('collapseAll')?.addEventListener('click', function(){
+            document.querySelectorAll('#accountsTable tbody tr.collapse').forEach(function(c){
+                var bs = bootstrap.Collapse.getOrCreateInstance(c);
+                bs.hide();
+            });
+        });
 
-</table>
+        // Export visible accounts to CSV (includes computed totals)
+        document.getElementById('exportCsv')?.addEventListener('click', function(){
+            var headers = ['Id','AccountNumber','AccountHolderName','AccountName','Balance','TotalCredit','TotalDebit','FinalBalance'];
+            var lines = [headers.join(',')];
+            document.querySelectorAll('#accountsTable tbody tr.table-row-clickable').forEach(function(r){
+                if (r.style.display === 'none') return; // skip filtered out rows
+                var accNumber = r.getAttribute('data-acc-number') || '';
+                var accHolder = r.getAttribute('data-acc-holder') || '';
+                var accName = r.getAttribute('data-acc-name') || '';
+                var balance = r.querySelector('td.text-end')?.textContent.trim() || '';
+                var totalCredit = r.getAttribute('data-total-credit') || '0';
+                var totalDebit = r.getAttribute('data-total-debit') || '0';
+                var finalBalance = r.getAttribute('data-final-balance') || '';
+                var row = ["", '"'+accNumber.replace(/"/g,'""')+'"', '"'+accHolder.replace(/"/g,'""')+'"', '"'+accName.replace(/"/g,'""')+'"', '"'+balance+'"', totalCredit, totalDebit, finalBalance];
+                lines.push(row.join(','));
+            });
+            var csv = lines.join('\n');
+            var blob = new Blob([csv], { type: 'text/csv' });
+            var url = URL.createObjectURL(blob);
+            var a = document.createElement('a');
+            a.href = url; a.download = 'accounts.csv'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+        });
+    })();
+</script>

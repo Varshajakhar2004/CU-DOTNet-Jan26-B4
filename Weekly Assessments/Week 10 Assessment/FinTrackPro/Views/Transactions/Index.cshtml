@@ -1,59 +1,166 @@
 ﻿@model IEnumerable<FinTrackPro.Models.Transaction>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Transactions";
+
+    var allTx = Model ?? Enumerable.Empty<FinTrackPro.Models.Transaction>();
+    var totalTx = allTx.Count();
+    var totalCredit = allTx.Where(t => (t.Category ?? "").Equals("Credit", System.StringComparison.OrdinalIgnoreCase)).Sum(t => t.Amount);
+    var totalDebit = allTx.Where(t => (t.Category ?? "").Equals("Debit", System.StringComparison.OrdinalIgnoreCase)).Sum(t => t.Amount);
+    var net = totalCredit - totalDebit;
+    var accounts = allTx.Select(t => t.Account?.AccountName ?? t.AccountId.ToString()).Distinct().ToList();
 }
 
-<h1>Transactions</h1>
+<div class="container">
+    <!-- Hero -->
+    <div class="mb-4 rounded" style="background-image:url('https://source.unsplash.com/1200x300/?finance,ledger'); background-size:cover; background-position:center;">
+        <div class="bg-dark bg-opacity-50 p-4 rounded">
+            <h1 class="text-white">Transactions</h1>
+            <p class="text-white-50">View and manage your financial transactions for all accounts in FinTrack Pro.</p>
+            <a asp-action="Create" class="btn btn-primary">Add New Transaction</a>
+        </div>
+    </div>
 
-<p>
-    <a asp-action="Create">Add New Transaction</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Amount)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Category)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Date)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Account)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Amount)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Category)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Account.AccountHolderName)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <div class="row mb-3">
+        <div class="col-md-3">
+            <div class="card text-white bg-secondary mb-2">
+                <div class="card-body">
+                    <h6 class="card-title">Total Transactions</h6>
+                    <p class="h4 mb-0">@totalTx</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-success mb-2">
+                <div class="card-body">
+                    <h6 class="card-title">Total Credit</h6>
+                    <p class="h4 mb-0">@String.Format("{0:C}", totalCredit)</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-danger mb-2">
+                <div class="card-body">
+                    <h6 class="card-title">Total Debit</h6>
+                    <p class="h4 mb-0">@String.Format("{0:C}", totalDebit)</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-dark bg-light mb-2">
+                <div class="card-body">
+                    <h6 class="card-title">Net</h6>
+                    <p class="h4 mb-0">@String.Format("{0:C}", net)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <input id="txSearch" class="form-control" placeholder="Search description or account..." />
+        </div>
+        <div class="col-md-3">
+            <select id="categoryFilter" class="form-select">
+                <option value="">All Categories</option>
+                <option value="Credit">Credit</option>
+                <option value="Debit">Debit</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <select id="accountFilter" class="form-select">
+                <option value="">All Accounts</option>
+                @foreach (var a in accounts)
+                {
+                    <option value="@a">@a</option>
+                }
+            </select>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-hover" id="transactionsTable">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                    <th>Account</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in allTx)
+                {
+                    <tr data-category="@(item.Category ?? "")" data-account="@(item.Account?.AccountName ?? item.AccountId.ToString())">
+                        <td>@item.Description</td>
+                        <td>
+                            @if ((item.Category ?? "").Equals("Credit", System.StringComparison.OrdinalIgnoreCase))
+                            {
+                                <span class="text-success">@String.Format("{0:C}", item.Amount)</span>
+                            }
+                            else if ((item.Category ?? "").Equals("Debit", System.StringComparison.OrdinalIgnoreCase))
+                            {
+                                <span class="text-danger">@String.Format("{0:C}", item.Amount)</span>
+                            }
+                            else
+                            {
+                                @String.Format("{0:C}", item.Amount)
+                            }
+                        </td>
+                        <td>@item.Category</td>
+                        <td>@item.Date.ToShortDateString()</td>
+                        <td>
+                            @if (item.Account != null)
+                            {
+                                <a asp-controller="Accounts" asp-action="Details" asp-route-id="@item.Account.Id">@item.Account.AccountName</a>
+                            }
+                            else
+                            {
+                                @item.AccountId
+                            }
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    (function(){
+        var search = document.getElementById('txSearch');
+        var cat = document.getElementById('categoryFilter');
+        var acc = document.getElementById('accountFilter');
+        var table = document.getElementById('transactionsTable');
+        var rows = table ? table.tBodies[0].rows : [];
+
+        function filterRows(){
+            var q = search.value.toLowerCase();
+            var c = cat.value;
+            var a = acc.value;
+
+            for (var i=0;i<rows.length;i++){
+                var r = rows[i];
+                var desc = r.cells[0].textContent.toLowerCase();
+                var category = r.getAttribute('data-category') || '';
+                var account = r.getAttribute('data-account') || '';
+
+                var show = true;
+                if (q && !(desc.indexOf(q) !== -1 || account.toLowerCase().indexOf(q) !== -1)) show = false;
+                if (c && category !== c) show = false;
+                if (a && account !== a) show = false;
+
+                r.style.display = show ? '' : 'none';
+            }
+        }
+
+        [search, cat, acc].forEach(function(el){ if(el) el.addEventListener('input', filterRows); });
+    })();
+</script>
+th
