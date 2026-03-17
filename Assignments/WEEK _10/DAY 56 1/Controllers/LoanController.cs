@@ -17,7 +17,7 @@ namespace QuickLoan.Controllers
     new Loan { Id = 7, BorrowerName = "Karan", LenderName = "Punjab National Bank", Amount = 60000, IsSettled = false }
 
         };
-        private static int nextId = 4;
+        private static int nextId = 8;
         // GET: LoanController
         public ActionResult Index()
         {
@@ -50,7 +50,8 @@ namespace QuickLoan.Controllers
         {
             if (ModelState.IsValid)
             {
-                loan.Id = nextId++;
+                // Assign Id as one greater than the current maximum Id in the list
+                loan.Id = (loans.Any() ? loans.Max(x => x.Id) + 1 : 1);
                 loans.Add(loan);
 
                 return RedirectToAction(nameof(Index));
@@ -89,12 +90,13 @@ namespace QuickLoan.Controllers
         {
             var loan = loans.FirstOrDefault(x => x.Id == id);
 
-            if (loan != null)
+            if (loan == null)
             {
-                loans.Remove(loan);
+                return NotFound();
             }
 
-            return RedirectToAction(nameof(Index));
+            // Show confirmation view before deleting
+            return View(loan);
         }
 
         // POST: LoanController/Delete/5
@@ -102,14 +104,19 @@ namespace QuickLoan.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)
         {
-            try
+            // Remove the loan (supporting form post delete) and renumber ids
+            var loan = loans.FirstOrDefault(x => x.Id == id);
+            if (loan != null)
             {
-                return RedirectToAction(nameof(Index));
+                loans.Remove(loan);
+                for (int i = 0; i < loans.Count; i++)
+                {
+                    loans[i].Id = i + 1;
+                }
+                nextId = loans.Count + 1;
             }
-            catch
-            {
-                return View();
-            }
+
+            return RedirectToAction(nameof(Index));
         }
     }
 }

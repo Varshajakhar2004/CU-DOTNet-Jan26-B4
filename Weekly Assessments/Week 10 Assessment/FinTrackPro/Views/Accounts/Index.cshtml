@@ -1,0 +1,202 @@
+﻿@* @model IEnumerable<FinTrackPro.Models.Account>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Accounts</h1>
+
+<p>
+    <a asp-action="Create">Add New Account</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountHolderName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Balance)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountHolderName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Balance)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+ *@
+@model IEnumerable<FinTrackPro.Models.Account>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Accounts</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Add New Account</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountHolderName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Balance)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AccountNumber)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.AccountHolderName)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.AccountName)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Balance)
+                </td>
+
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> |
+
+                    <!-- Accordion Button -->
+                    <button class="btn btn-sm btn-dark text-white"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#transactions-@item.Id">
+                        View Transactions
+                    </button>
+                </td>
+            </tr>
+
+            <!-- Accordion Transactions Row -->
+
+            <tr class="collapse" id="transactions-@item.Id">
+                <td colspan="5">
+
+                    <h5>Transactions</h5>
+
+                    @if (item.Transactions != null && item.Transactions.Any())
+                    {
+                        var totalCredit = item.Transactions.Where(t => (t.Category ?? "").Equals("Credit", System.StringComparison.OrdinalIgnoreCase)).Sum(t => t.Amount);
+                        var totalDebit = item.Transactions.Where(t => (t.Category ?? "").Equals("Debit", System.StringComparison.OrdinalIgnoreCase)).Sum(t => t.Amount);
+                        var finalBalance = item.Balance + totalCredit - totalDebit; // compute final balance by applying credits then debits
+
+                        <table class="table table-sm table-bordered">
+
+                            <thead>
+                                <tr>
+                                    <th>Description</th>
+                                    <th>Amount</th>
+                                    <th>Category</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                @foreach (var t in item.Transactions)
+                                {
+                                    var isGreenCategory = (t.Category ?? "").ToLower() == "green";
+                                    <tr class='@(isGreenCategory ? "table-success" : "")'>
+                                        <td>@t.Description</td>
+                                        <td>
+                                            @if ((t.Category ?? "").Equals("Credit", System.StringComparison.OrdinalIgnoreCase))
+                                            {
+                                                <span class="text-success">@String.Format("{0:C}", t.Amount)</span>
+                                            }
+                                            else if ((t.Category ?? "").Equals("Debit", System.StringComparison.OrdinalIgnoreCase))
+                                            {
+                                                <span class="text-danger">@String.Format("{0:C}", t.Amount)</span>
+                                            }
+                                            else
+                                            {
+                                                @String.Format("{0:C}", t.Amount)
+                                            }
+                                        </td>
+                                        <td>@t.Category</td>
+                                        <td>@t.Date.ToShortDateString()</td>
+                                    </tr>
+                                }
+
+                            </tbody>
+
+                        </table>
+
+                        <div class="d-flex justify-content-end gap-4 mt-2">
+                            <div>
+                                <strong>Total Credit:</strong>
+                                <span class="text-success">@String.Format("{0:C}", totalCredit)</span>
+                            </div>
+                            <div>
+                                <strong>Total Debit:</strong>
+                                <span class="text-danger">@String.Format("{0:C}", totalDebit)</span>
+                            </div>
+                            <div>
+                                <strong>Final Balance:</strong>
+                                <span>@String.Format("{0:C}", finalBalance)</span>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <p>No transactions available.</p>
+                    }
+
+                </td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>

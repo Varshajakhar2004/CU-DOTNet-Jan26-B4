@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\varsha\\OneDrive\\Desktop\\Capgemini Training\\QuickLoan\\QuickLoan\\QuickLoan.csproj": {}
+    "C:\\Users\\varsha\\OneDrive\\Desktop\\Capgemini Training\\CU-DOTNet-Jan26-B4\\Assignments\\WEEK _10\\DAY 56 1\\QuickLoan.csproj": {}
   },
   "projects": {
-    "C:\\Users\\varsha\\OneDrive\\Desktop\\Capgemini Training\\QuickLoan\\QuickLoan\\QuickLoan.csproj": {
+    "C:\\Users\\varsha\\OneDrive\\Desktop\\Capgemini Training\\CU-DOTNet-Jan26-B4\\Assignments\\WEEK _10\\DAY 56 1\\QuickLoan.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\varsha\\OneDrive\\Desktop\\Capgemini Training\\QuickLoan\\QuickLoan\\QuickLoan.csproj",
+        "projectUniqueName": "C:\\Users\\varsha\\OneDrive\\Desktop\\Capgemini Training\\CU-DOTNet-Jan26-B4\\Assignments\\WEEK _10\\DAY 56 1\\QuickLoan.csproj",
         "projectName": "QuickLoan",
-        "projectPath": "C:\\Users\\varsha\\OneDrive\\Desktop\\Capgemini Training\\QuickLoan\\QuickLoan\\QuickLoan.csproj",
+        "projectPath": "C:\\Users\\varsha\\OneDrive\\Desktop\\Capgemini Training\\CU-DOTNet-Jan26-B4\\Assignments\\WEEK _10\\DAY 56 1\\QuickLoan.csproj",
         "packagesPath": "C:\\Users\\varsha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\varsha\\OneDrive\\Desktop\\Capgemini Training\\QuickLoan\\QuickLoan\\obj\\",
+        "outputPath": "C:\\Users\\varsha\\OneDrive\\Desktop\\Capgemini Training\\CU-DOTNet-Jan26-B4\\Assignments\\WEEK _10\\DAY 56 1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

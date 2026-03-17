@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GPPyHLJzld0=",
+  "dgSpecHash": "gDMRNoe2nII=",
   "success": true,
-  "projectFilePath": "C:\\Users\\varsha\\OneDrive\\Desktop\\Capgemini Training\\QuickLoan\\QuickLoan\\QuickLoan.csproj",
+  "projectFilePath": "C:\\Users\\varsha\\OneDrive\\Desktop\\Capgemini Training\\CU-DOTNet-Jan26-B4\\Assignments\\WEEK _10\\DAY 56 1\\QuickLoan.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\varsha\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\varsha\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

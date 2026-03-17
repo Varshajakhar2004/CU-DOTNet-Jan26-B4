@@ -1,6 +1,6 @@
+using System.Diagnostics;
 using FinTrackPro.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
 
 namespace FinTrackPro.Controllers
 {

@@ -1,0 +1,106 @@
+﻿@model FinTrackPro.Models.Transaction
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Transaction</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Amount" class="control-label"></label>
+                <input asp-for="Amount" class="form-control" />
+                <span asp-validation-for="Amount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Category" class="control-label"></label>
+                <!-- Hidden input to store selected category -->
+                <input asp-for="Category" type="hidden" id="Category" class="form-control" />
+
+                <!-- Button group to choose Credit or Debit -->
+                <div class="btn-group" role="group" aria-label="Category selection">
+                    <button type="button" class="btn btn-outline-success" data-category="Credit">Credit</button>
+                    <button type="button" class="btn btn-outline-danger" data-category="Debit">Debit</button>
+                </div>
+
+                <span asp-validation-for="Category" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AccountId" class="control-label"></label>
+                <select asp-for="AccountId" class ="form-control" asp-items="ViewBag.AccountId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        (function() {
+            var hidden = document.getElementById('Category');
+            var buttons = document.querySelectorAll('[data-category]');
+
+            function clearButtonStyles() {
+                buttons.forEach(function(b) {
+                    b.classList.remove('btn-success', 'btn-danger');
+                    // restore outline style
+                    var cat = b.getAttribute('data-category');
+                    if (cat === 'Credit') {
+                        b.classList.remove('btn-outline-success');
+                        b.classList.add('btn-outline-success');
+                    } else if (cat === 'Debit') {
+                        b.classList.remove('btn-outline-danger');
+                        b.classList.add('btn-outline-danger');
+                    }
+                });
+            }
+
+            buttons.forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    var cat = btn.getAttribute('data-category');
+                    if (!hidden) return;
+                    hidden.value = cat;
+
+                    // update styles
+                    clearButtonStyles();
+                    if (cat === 'Credit') {
+                        btn.classList.remove('btn-outline-success');
+                        btn.classList.add('btn-success');
+                    } else if (cat === 'Debit') {
+                        btn.classList.remove('btn-outline-danger');
+                        btn.classList.add('btn-danger');
+                    }
+                });
+            });
+
+            // set default selection if empty (Credit)
+            if (hidden && !hidden.value) {
+                var defaultBtn = document.querySelector('[data-category="Credit"]');
+                if (defaultBtn) { defaultBtn.click(); }
+            }
+        })();
+    </script>
+}
