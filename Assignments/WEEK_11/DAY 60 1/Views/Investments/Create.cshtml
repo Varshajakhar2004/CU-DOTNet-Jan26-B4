@@ -1,0 +1,8 @@
+﻿@model InvestmentCreateViewModel
+
+<form asp-action="Create" method="post">
+    <input asp-for="TickerSymbol" placeholder="Ticker" />
+    <input asp-for="Price" placeholder="Price" />
+    <input asp-for="Quantity" placeholder="Quantity" />
+    <button type="submit">Save</button>
+</form>

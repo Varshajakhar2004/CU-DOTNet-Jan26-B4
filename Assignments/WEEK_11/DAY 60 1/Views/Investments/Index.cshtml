@@ -1,0 +1,8 @@
+﻿@model IEnumerable<Investment>
+
+<a asp-action="Create">Add</a>
+
+@foreach (var item in Model)
+{
+    <p>@item.TickerSymbol - @item.Quantity</p>
+}
