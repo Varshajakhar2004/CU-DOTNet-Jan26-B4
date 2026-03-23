@@ -1,0 +1,14 @@
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\WEEK 12\AdaptiveStudentDataLayer\bin\Debug\net8.0\AdaptiveStudentDataLayer.exe
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\WEEK 12\AdaptiveStudentDataLayer\bin\Debug\net8.0\AdaptiveStudentDataLayer.deps.json
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\WEEK 12\AdaptiveStudentDataLayer\bin\Debug\net8.0\AdaptiveStudentDataLayer.runtimeconfig.json
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\WEEK 12\AdaptiveStudentDataLayer\bin\Debug\net8.0\AdaptiveStudentDataLayer.dll
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\WEEK 12\AdaptiveStudentDataLayer\bin\Debug\net8.0\AdaptiveStudentDataLayer.pdb
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\WEEK 12\AdaptiveStudentDataLayer\obj\Debug\net8.0\AdaptiveStudentDataLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\WEEK 12\AdaptiveStudentDataLayer\obj\Debug\net8.0\AdaptiveStudentDataLayer.AssemblyInfoInputs.cache
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\WEEK 12\AdaptiveStudentDataLayer\obj\Debug\net8.0\AdaptiveStudentDataLayer.AssemblyInfo.cs
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\WEEK 12\AdaptiveStudentDataLayer\obj\Debug\net8.0\AdaptiveStudentDataLayer.csproj.CoreCompileInputs.cache
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\WEEK 12\AdaptiveStudentDataLayer\obj\Debug\net8.0\AdaptiveStudentDataLayer.dll
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\WEEK 12\AdaptiveStudentDataLayer\obj\Debug\net8.0\refint\AdaptiveStudentDataLayer.dll
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\WEEK 12\AdaptiveStudentDataLayer\obj\Debug\net8.0\AdaptiveStudentDataLayer.pdb
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\WEEK 12\AdaptiveStudentDataLayer\obj\Debug\net8.0\AdaptiveStudentDataLayer.genruntimeconfig.cache
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\WEEK 12\AdaptiveStudentDataLayer\obj\Debug\net8.0\ref\AdaptiveStudentDataLayer.dll
