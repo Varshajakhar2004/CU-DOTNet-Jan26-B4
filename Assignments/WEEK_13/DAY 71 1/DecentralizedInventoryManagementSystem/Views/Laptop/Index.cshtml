@@ -1,0 +1,49 @@
+﻿@model List<DecentralizedInventoryManagementSystem.Models.Laptop>
+
+@{
+    ViewData["Title"] = "Inventory Dashboard";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">💻 Inventory Dashboard</h2>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["Success"]
+        </div>
+    }
+
+    <a class="btn btn-primary mb-3" href="/Laptop/Create">➕ Add New Laptop</a>
+
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Model</th>
+                <th>Serial Number</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Count > 0)
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.ModelName</td>
+                        <td>@item.SerialNumber</td>
+                        <td>₹ @item.Price</td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="3" class="text-center text-muted">
+                        No laptops found
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
