@@ -1,0 +1,62 @@
+﻿@model IEnumerable<FrontendMVCIntegration.Models.Destination>
+
+@{
+    ViewData["Title"] = "Travel Destinations";
+}
+
+<h2 class="text-center mb-4">🌍 Travel Destinations</h2>
+
+<div class="text-center mb-4">
+    <a asp-action="Create" class="btn btn-success me-2">➕ Add New Destination</a>
+    <a asp-action="TopRated" class="btn btn-warning">⭐ Top Rated</a>
+</div>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-lg border-0 rounded-4 h-100 destination-card">
+                
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">
+                        @item.CityName <small class="text-muted">(@item.Country)</small>
+                    </h5>
+
+                    <p class="card-text text-secondary">
+                        @item.Description
+                    </p>
+
+                    <p>
+                        <strong>Rating:</strong>
+                        @for (int i = 0; i < item.Rating; i++)
+                        {
+                            <span class="star">★</span>
+                        }
+                    </p>
+
+                    <p class="text-muted">
+                        🗓 @item.LastVisited.ToString("dd MMM yyyy")
+                    </p>
+                </div>
+
+
+            </div>
+        </div>
+    }
+</div>
+
+<style>
+    .destination-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .destination-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .star {
+        color: gold;
+        font-size: 18px;
+    }
+</style>

@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/Week13Assessment/">
+    <Project Path="BackendRESTfulWebAPI/BackendRESTfulWebAPI.csproj" />
+    <Project Path="FrontendMVCIntegration/FrontendMVCIntegration.csproj" />
+  </Folder>
+</Solution>

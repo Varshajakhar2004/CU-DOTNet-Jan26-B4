@@ -1,0 +1,81 @@
+[
+  {
+    "ContainingType": "DestinationsController",
+    "Method": "GetAll",
+    "RelativePath": "api/Destinations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DestinationsController",
+    "Method": "Create",
+    "RelativePath": "api/Destinations",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "d",
+        "Type": "BackendRESTfulWebAPI.Models.Destination",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DestinationsController",
+    "Method": "Get",
+    "RelativePath": "api/Destinations/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DestinationsController",
+    "Method": "Update",
+    "RelativePath": "api/Destinations/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "d",
+        "Type": "BackendRESTfulWebAPI.Models.Destination",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DestinationsController",
+    "Method": "Delete",
+    "RelativePath": "api/Destinations/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

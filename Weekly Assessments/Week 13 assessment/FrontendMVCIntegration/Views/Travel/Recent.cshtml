@@ -1,0 +1,45 @@
+﻿@model IEnumerable<FrontendMVCIntegration.Models.Destination>
+
+@{
+    ViewData["Title"] = "Top Rated Destinations";
+}
+
+<h2 class="mb-4 text-center">⭐ Top Rated Destinations</h2>
+
+<div class="row">
+    @if (!Model.Any())
+    {
+        <p class="text-center text-danger">No top-rated destinations found.</p>
+    }
+    else
+    {
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg rounded">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            @item.CityName (@item.Country)
+                        </h5>
+
+                        <p class="card-text">
+                            @item.Description
+                        </p>
+
+                        <p>
+                            <strong>Rating:</strong>
+                            @for (int i = 0; i < item.Rating; i++)
+                            {
+                                <span style="color:gold; font-size:18px;">★</span>
+                            }
+                        </p>
+
+                        <p class="text-muted">
+                            Last Visited: @item.LastVisited.ToString("dd-MM-yyyy")
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>

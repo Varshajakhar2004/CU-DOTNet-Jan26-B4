@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "BackendRESTfulWebAPI\\BackendRESTfulWebAPI.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "FrontendMVCIntegration\\FrontendMVCIntegration.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

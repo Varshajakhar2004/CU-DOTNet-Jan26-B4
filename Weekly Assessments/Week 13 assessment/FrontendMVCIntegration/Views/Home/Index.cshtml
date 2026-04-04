@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="container mt-5">
+
+    <h1 class="text-center mb-4">🌍 Vagabond Travel Dashboard</h1>
+
+    <div class="row">
+
+        <!-- View Destinations -->
+        <div class="col-md-3">
+            <div class="card shadow p-3 mb-4 text-center">
+                <h4>📍 Destinations</h4>
+                <p>View all travel locations</p>
+                <a href="/Travel/Index" class="btn btn-primary">Open</a>
+            </div>
+        </div>
+
+        <!-- Add Destination -->
+        <div class="col-md-3">
+            <div class="card shadow p-3 mb-4 text-center">
+                <h4>➕ Add New</h4>
+                <p>Add a new destination</p>
+                <a href="/Travel/Create" class="btn btn-success">Open</a>
+            </div>
+        </div>
+
+        <!-- Top Rated -->
+        <div class="col-md-3">
+            <div class="card shadow p-3 mb-4 text-center">
+                <h4>⭐ Top Rated</h4>
+                <p>See best places</p>
+                <a href="/Travel/TopRated" class="btn btn-warning">Open</a>
+            </div>
+        </div>
+
+        <!-- Recently Visited -->
+        <div class="col-md-3">
+            <div class="card shadow p-3 mb-4 text-center">
+                <h4>🕒 Recent</h4>
+                <p>Recently visited places</p>
+                <a href="/Travel/Recent" class="btn btn-info">Open</a>
+            </div>
+        </div>
+
+    </div>
+
+</div>

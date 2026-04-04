@@ -1,0 +1,32 @@
+﻿@model IEnumerable<FrontendMVCIntegration.Models.Destination>
+
+<h2 class="mb-4">⭐ Top Rated Destinations</h2>
+
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>City</th>
+            <th>Country</th>
+            <th>Description</th>
+            <th>Rating</th>
+            <th>Last Visited</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CityName</td>
+                <td>@item.Country</td>
+                <td>@item.Description</td>
+                <td>
+                    @for (int i = 0; i < item.Rating; i++)
+                    {
+                        <span style="color:gold;">★</span>
+                    }
+                </td>
+                <td>@item.LastVisited.ToString("dd-MM-yyyy HH:mm")</td>
+            </tr>
+        }
+    </tbody>
+</table>

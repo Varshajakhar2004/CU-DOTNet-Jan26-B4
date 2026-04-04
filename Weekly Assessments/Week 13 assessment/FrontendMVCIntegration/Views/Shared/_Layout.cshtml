@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Travel App</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+</head>
+<body>
+
+    <!-- 🔥 NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar shadow-sm">
+    <div class="container-fluid">
+
+            <a class="navbar-brand fw-bold" asp-controller="Home" asp-action="Index">
+                🌍 Travel App
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="Index">🏠 Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Travel" asp-action="Index">🌍 Destinations</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Travel" asp-action="Create">➕ Add</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Travel" asp-action="TopRated">⭐ Top Rated</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 🔥 MAIN CONTENT -->
+    <div class="container mt-4">
+        @RenderBody() <!-- ✅ REQUIRED -->
+    </div>
+
+    <!-- 🔥 FOOTER -->
+    <footer class="text-center mt-5 mb-3 text-muted">
+        <hr />
+        <p>© 2026 - Travel App ✈</p>
+    </footer>
+
+    <!-- 🔥 SCRIPTS -->
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>
