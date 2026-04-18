@@ -1,0 +1,26 @@
+﻿@model List<NorthwindCatalog.Services.DTOs.ProductDto>
+
+<h2>Products</h2>
+
+<div class="row">
+    @foreach (var p in Model)
+    {
+        <div class="col-md-4 mb-3">
+            <div class="card shadow">
+
+                <div class="card-body">
+                    <h5>@p.ProductName</h5>
+
+                    <p><b>Price:</b> ₹@p.UnitPrice</p>
+                    <p><b>Stock:</b> @p.UnitsInStock</p>
+
+                    <p class="text-success">
+                        <b>Inventory Value:</b>
+                        ₹@(p.UnitPrice* p.UnitsInStock)
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    }
+</div>

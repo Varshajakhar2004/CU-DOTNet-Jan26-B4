@@ -1,0 +1,54 @@
+[
+  {
+    "ContainingType": "NorthwindCatalog.Web.Controllers.CategoriesApiController",
+    "Method": "Get",
+    "RelativePath": "api/categories",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NorthwindCatalog.Web.Controllers.ProductsApiController",
+    "Method": "GetById",
+    "RelativePath": "api/products/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NorthwindCatalog.Web.Controllers.ProductsApiController",
+    "Method": "GetByCategory",
+    "RelativePath": "api/products/by-category/{categoryId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "categoryId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NorthwindCatalog.Web.Controllers.SummaryApiController",
+    "Method": "GetSummary",
+    "RelativePath": "api/summary",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

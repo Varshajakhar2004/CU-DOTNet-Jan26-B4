@@ -1,0 +1,14 @@
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\NorthwindCatalog\NorthwindCatalog.Services\bin\Debug\net8.0\NorthwindCatalog.Services.deps.json
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\NorthwindCatalog\NorthwindCatalog.Services\bin\Debug\net8.0\NorthwindCatalog.Services.runtimeconfig.json
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\NorthwindCatalog\NorthwindCatalog.Services\bin\Debug\net8.0\NorthwindCatalog.Services.dll
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\NorthwindCatalog\NorthwindCatalog.Services\bin\Debug\net8.0\NorthwindCatalog.Services.pdb
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\NorthwindCatalog\NorthwindCatalog.Services\obj\Debug\net8.0\NorthwindCatalog.Services.csproj.AssemblyReference.cache
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\NorthwindCatalog\NorthwindCatalog.Services\obj\Debug\net8.0\NorthwindCatalog.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\NorthwindCatalog\NorthwindCatalog.Services\obj\Debug\net8.0\NorthwindCatalog.Services.AssemblyInfoInputs.cache
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\NorthwindCatalog\NorthwindCatalog.Services\obj\Debug\net8.0\NorthwindCatalog.Services.AssemblyInfo.cs
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\NorthwindCatalog\NorthwindCatalog.Services\obj\Debug\net8.0\NorthwindCatalog.Services.csproj.CoreCompileInputs.cache
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\NorthwindCatalog\NorthwindCatalog.Services\obj\Debug\net8.0\NorthwindCatalog.Services.dll
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\NorthwindCatalog\NorthwindCatalog.Services\obj\Debug\net8.0\refint\NorthwindCatalog.Services.dll
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\NorthwindCatalog\NorthwindCatalog.Services\obj\Debug\net8.0\NorthwindCatalog.Services.pdb
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\NorthwindCatalog\NorthwindCatalog.Services\obj\Debug\net8.0\NorthwindCatalog.Services.genruntimeconfig.cache
+C:\Users\varsha\OneDrive\Desktop\Capgemini Training\NorthwindCatalog\NorthwindCatalog.Services\obj\Debug\net8.0\ref\NorthwindCatalog.Services.dll
